@@ -1,4 +1,4 @@
-FROM amazoncorretto:8
+FROM amazoncorretto:11
 VOLUME /tmp
-COPY ./build/libs/gs-spring-boot-docker-0.1.0.jar app.jar
+COPY ./build/libs/demo-0.0.1-SNAPSHOT.jar app.jar
 ENTRYPOINT ["java","-Djava.security.egd=file:/dev/./urandom","-jar","/app.jar"]

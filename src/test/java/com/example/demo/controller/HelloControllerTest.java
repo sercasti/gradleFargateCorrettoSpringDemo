@@ -22,7 +22,7 @@ public class HelloControllerTest {
 
 	@Test
 	public void getHello() throws Exception {
-		final String result = "Hello Docker World. I'm running inside AWS Fargate and the Java Runtime version is " + System.getProperty("java.runtime.version") + " from "+ System.getProperty("java.vm.name") + " and my Java home is " + System.getProperty("java.home");
+        final String result = "Hello Docker World. I'm running inside AWS Fargate and the Java Runtime version is " + System.getProperty("java.runtime.version") + " from "+ System.getProperty("java.vm.name") + " and my Java home is " + System.getProperty("java.home") + " and db.username is placeholderForAWSParamStore";
 
 		mvc.perform(MockMvcRequestBuilders.get("/").accept(MediaType.APPLICATION_JSON))
 				.andExpect(status().isOk())
