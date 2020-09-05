@@ -1,0 +1,20 @@
+version: 0.2
+
+phases:
+  install:
+    runtime-versions:
+      java: corretto11
+    commands:
+      - echo Entering install phase...
+      - echo Nothing to do now
+  build:
+    commands:
+      - echo Build started on `date`
+      - echo Current directory is `pwd`
+      - whereis gradle
+      - which gradle
+      - java -version
+      - gradle build
+artifacts:
+  files:
+    - 'build/libs/*.jar'
