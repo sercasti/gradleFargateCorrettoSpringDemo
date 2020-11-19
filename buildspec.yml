@@ -15,6 +15,7 @@ phases:
       - which gradle
       - java -version
       - gradle build
+      - gradle publish
 artifacts:
   files:
     - 'build/libs/*.jar'
